@@ -7,126 +7,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link href="stylesPath.css" rel="stylesheet">
-
-    <!-- <title>New Parents Meetup Group</title> -->
-
-</head>
-
-<body>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-    <div class="container text-left">
-        <header class="main-header">
-            <div class="banner">
-                New Parents Meetup Group
+    <body>
+        <h3>New Parents Meetups</h3>
+        
+        <ul class="tab">
+          <li><a href="#" class="tablinks" onclick="openTab(event, 'Welcome')">Welcome</a></li>
+          <li><a href="#" class="tablinks" onclick="openTab(event, 'Weather')">Weather</a></li>
+          <li><a href="#" class="tablinks" onclick="openTab(event, 'Timer')">Timer</a></li>
+            <li><a href="#" class="tablinks" onclick="openTab(event, 'Contact')">Contact</a></li>
+        </ul>
+        
+        <div id="Welcome" class="tabcontent">
+          <h3>Welcome</h3>
+          <p>Since having our baby, we realized that we need to meet more new parents.</p>
+          <p>We are doing it not only for fun, but for making new friends for ourselves and our little ones.
+          </p>
+          <p>Let's help each other out by exchanging our knowledge, easing our fears and helping each other
+              out.</p>
+        </div>
+        
+        <div id="Weather" class="tabcontent">
+          <h3>Weather Check</h3>
+          <div class="api">
+        </div>
+        <section class="top-banner">
+            <div class="container">
+                <h2 class="heading">Current Weather</h2>
+                <form>
+                    <input type="text" placeholder="Search for a city" autofocus>
+                    <button type="submit">SUBMIT</button>
+                    <span class="msg"></span>
+                </form>
             </div>
+        </section>
+        <section class="ajax-section">
+            <div class="container">
+                <ul class="cities"></ul>
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 nav nav-pills mb-5" id="pills-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="pills-welcome-tab" data-toggle="pill" href="#welcome"
-                                role="tab" aria-controls="pills-home" aria-selected="true">Welcome</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="pills-weather-tab" data-toggle="pill" href="#weather" role="tab"
-                                aria-controls="pills-weather" aria-selected="false">Weather</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="pills-timer-tab" data-toggle="pill" href="#timer" role="tab"
-                                aria-controls="pills-timer" aria-selected="false">Timer</a>
-                        </li>
-                        <li class="nav-item">
-
-                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#contact" role="tab"
-                                aria-controls="pill-contact" aria-selected="false">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <main>
-            <div class="pages tab-content" id="pills-tabContent">
-                <article class="tab-pane fade show active" id="welcome" role="tabpanel"
-                    aria-labelledby="pills-welcome-tab">
-                    <h1>Welcome</h1>
-                    <p>Since having our baby, we realized that we need to meet more new parents.</p>
-                    <p>We are doing it not only for fun, but for making new friends for ourselves and our little ones.
-                    </p>
-                    <p>Let's help each other out by exchanging our knowledge, easing our fears and helping each other
-                        out.</p>
 
             </div>
-            </article>
+        </section>
 
-            <article class="tab-pane fade" id="weather" role="tabpanel" aria-labelledby="pills-weather-tab">
-                <h2>Weather Check</h2>
-
-                <div class="api">
-                </div>
-                <section class="top-banner">
-                    <div class="container">
-                        <h2 class="heading">Current Weather</h2>
-                        <form>
-                            <input type="text" placeholder="Search for a city" autofocus>
-                            <button type="submit">SUBMIT</button>
-                            <span class="msg"></span>
-                        </form>
-                    </div>
-                </section>
-                <section class="ajax-section">
-                    <div class="container">
-                        <ul class="cities"></ul>
-
-
-                    </div>
-                </section>
-
-                <link href="weather.css" rel="stylesheet">
-                <script src="weather.js"></script>
-
-            </article>
-
-
-            <div class="pages tab-content" id="pills-tabContent">
-                <article class="tab-pane fade show active" id="timer" role="tabpanel" aria-labelledby="pills-timer-tab">
-                    <h1>Countdown to our next meetup</h1>
-
-                    <!-- <center> -->
-                    <div id="countdown-container">
-                        <div id="countdown">
-                            <span id="days">0d</span> : <span id="hours">0h</span> :
-                            <span id="minutes">0m</span> : <span id="seconds">0s</span>
-                        </div>
-                    </div>
-                    <!-- </center> -->
+        <link href="weather.css" rel="stylesheet">
+        <script src="weather.js"></script>
+        </div>
+        
+        <div id="Timer" class="tabcontent">
+          <h3>Meetup Countdown</h3>
+          <div id="countdown-container">
+            <div id="countdown">
+                <span id="days">0d</span> : <span id="hours">0h</span> :
+                <span id="minutes">0m</span> : <span id="seconds">0s</span>
             </div>
-
-            </article>
-
-
-            <article class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <h2>Contact Us</h2>
-                <p>If you would like to join our growing group, fill out the contact form.</p>
+        </div>
+        <link href="timer.css" rel="stylesheet">
+        <script src="timer.js"></script>
+        </div>
+          
+          <div id="Contact" class="tabcontent">
+          <h3>Contact Us</h3>
+          <p>If you would like to join our growing group, fill out the contact form.</p>
 
                 <!-- <title>Simple HTML Form</title> -->
                 <link href="contact.css" rel="stylesheet">
@@ -181,11 +122,137 @@
                         </div>
                     </form>
 
+        </div>
+        
+        <!-- <script>
+        
+        </script> -->
+        
+        </body>
 
-            </article>
+
+        <main>
+            <!-- <div class="pages tab-content" id="pills-tabContent">
+                <article class="tab-pane fade show active" id="welcome" role="tabpanel"
+                    aria-labelledby="pills-welcome-tab">
+                    <h1>Welcome</h1>
+                    <p>Since having our baby, we realized that we need to meet more new parents.</p>
+                    <p>We are doing it not only for fun, but for making new friends for ourselves and our little ones.
+                    </p>
+                    <p>Let's help each other out by exchanging our knowledge, easing our fears and helping each other
+                        out.</p>
+
+            </div>
+            </article> -->
+
+            <!-- <article class="tab-pane fade" id="weather" role="tabpanel" aria-labelledby="pills-weather-tab">
+                <h2>Weather Check</h2>
+
+                <div class="api">
+                </div>
+                <section class="top-banner">
+                    <div class="container">
+                        <h2 class="heading">Current Weather</h2>
+                        <form>
+                            <input type="text" placeholder="Search for a city" autofocus>
+                            <button type="submit">SUBMIT</button>
+                            <span class="msg"></span>
+                        </form>
+                    </div>
+                </section>
+                <section class="ajax-section">
+                    <div class="container">
+                        <ul class="cities"></ul>
+
+
+                    </div>
+                </section>
+
+                <link href="weather.css" rel="stylesheet">
+                <script src="weather.js"></script>
+
+            </article> -->
+
+
+            <!-- <div class="pages tab-content" id="pills-tabContent">
+                <article class="tab-pane fade show active" id="timer" role="tabpanel" aria-labelledby="pills-timer-tab">
+                    <h1>Countdown to our next meetup</h1> -->
+
+                    <!-- <center> -->
+                    <!-- <div id="countdown-container">
+                        <div id="countdown">
+                            <span id="days">0d</span> : <span id="hours">0h</span> :
+                            <span id="minutes">0m</span> : <span id="seconds">0s</span>
+                        </div>
+                    </div> -->
+                    <!-- </center> -->
+            <!-- </div>
+
+            </article> -->
+
+
+            <!-- <article class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <h2>Contact Us</h2>
+                <p>If you would like to join our growing group, fill out the contact form.</p>
+
+                <!-- <title>Simple HTML Form</title> -->
+                <!-- <link href="contact.css" rel="stylesheet">
+                <script src="contact.js"></script>
+
+                <form>
+                    <form name="contactForm" onsubmit="return validateForm()" action="confirmation.php" method="post">
+                        <h2>Contact Us</h2>
+                        <div class="row">
+                            <label>Full Name</label>
+                            <input type="text" name="name">
+                            <div class="error" id="nameErr"></div>
+                        </div>
+                        <div class="row">
+                            <label>Email Address</label>
+                            <input type="text" name="email">
+                            <div class="error" id="emailErr"></div>
+                        </div>
+                        <div class="row">
+                            <label>Mobile Number</label>
+                            <input type="text" name="mobile" maxlength="10">
+                            <div class="error" id="mobileErr"></div>
+                        </div>
+                        <div class="row">
+                            <label>County</label>
+                            <select name="county">
+                                <option>Select</option>
+                                <option>Jefferson</option>
+                                <option>Shelby</option>
+                                <option>Oldham</option>
+                            </select>
+                            <div class="error" id="countyErr"></div>
+                        </div>
+                        <div class="row">
+                            <label>Gender</label>
+                            <div class="form-inline">
+                                <label><input type="radio" name="gender" value="male"> Male</label>
+                                <label><input type="radio" name="gender" value="female"> Female</label>
+                            </div>
+                            <div class="error" id="genderErr"></div>
+                        </div>
+                        <div class="row">
+                            <label>Hobbies <i>(Optional)</i></label>
+                            <div class="form-inline">
+                                <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+                                <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+                                <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+
+
+            </article> --> -->
 
 
 
-</body>
+<!-- </body> -->
 
 </html>
