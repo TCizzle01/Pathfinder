@@ -1,1 +1,1 @@
-My project features countdown clock, contact form including regex and weather API 
+My project features countdown clock, contact form including regex, and weather API.  In future updates, I would like to have to countdown clock count to a specific date instead of just being a timer.  
