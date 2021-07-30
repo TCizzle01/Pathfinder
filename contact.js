@@ -1,14 +1,14 @@
 
 function check_Alpha(letters){
     var regex = /^[a-zA-Z]+$/;
-    if(regex.test(letters.yourname.value) == false){
-   alert("Name must be in alphabets only");
-   letters.yourname.focus();
+    if(regex.test(letters) == false){
+   alert("Name must be in alphabet only");
+  
    return false;
     }
-    if(letters.yourname.value == "_"){
+    if(letters == "_"){
       alert("Name Field cannot be left empty");
-      letters.yourname.focus();
+      
       return false;
     }
     return true;
@@ -17,7 +17,7 @@ function check_Alpha(letters){
 function check_Email(mail){
     var regex = /^(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+([;.](([a-zA-Z0-9_\-\.]+)@{[a-zA-Z0-9_\-\.]+0\.([a-zA-Z]{2,5}){1,25})+)*$/;
     if(regex.test(mail)){
-      return true;
+      
       alert("Congrats! This is a valid Email");
     }
     else{
@@ -31,4 +31,6 @@ console.log("hi")
       e.preventDefault ()
       var email = document.getElementById ("email")
      check_Email(email.value)
+     var name = document.getElementById ("name")
+     check_Alpha(name.value)
     })
